@@ -4,7 +4,6 @@ public class WelcomeScreen {
     public WelcomeScreen(){
         this.applicationName = "List Guidance";
         this.developerName = "Aliasghar Asgharinia";
-
     }
     public String getDeveloperName(){
         return developerName;
