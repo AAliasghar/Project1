@@ -46,7 +46,7 @@ public class Options extends FileHandling {
                     case 6:
                         System.out.println("Thanks for using the application, see you soon.");
                         System.exit(0);
-                        //exit();
+                        exit();
                         break;
                     default:
                         System.out.println("Try again");
@@ -82,7 +82,7 @@ public class Options extends FileHandling {
 
         }
         list.add(fileName);
-        
+
         createAndWriting(fileName, data);
         System.out.println(list.size());
         Collections.sort(list);
@@ -182,6 +182,11 @@ public class Options extends FileHandling {
         Collections.sort(list);
         displayList();
         System.out.println("========================");
+    }
+
+    public void exit(){
+        System.out.println("Thanks for using this application ");
+
     }
 
 
