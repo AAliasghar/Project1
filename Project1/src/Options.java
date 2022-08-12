@@ -11,8 +11,12 @@ public class Options extends FileHandling {
         do {
             try {
                 System.out.println(" 1.Add File \n 2.Delete File \n 3.update \n 4.Display the list \n 5.Search \n 6.Exit  ");
-                System.out.println("Enter your Choice : ");
-                choice = scanner.nextInt();
+               try{ System.out.println("Enter your Choice : ");
+                choice = scanner.nextInt(); }
+               catch (InputMismatchException ex){
+                   System.out.println("Please enter an Integer");
+               }
+
                 switch (choice) {
                     case 1:
                         System.out.println("Getting ready to Add File to the File List ");
@@ -53,7 +57,6 @@ public class Options extends FileHandling {
                 System.out.println("Please enter correct value type");
             }
         }
-
         while (choice > 0 && choice < 6);
     }
 
@@ -78,10 +81,8 @@ public class Options extends FileHandling {
             System.out.println("Please enter");
 
         }
-        //System.out.println("Please add path directory where your file will be stored \n");
-        // String filePath = scanner.next();
         list.add(fileName);
-        //FileHandling.createAndWriteUsingNioPackage(fileName,data);
+        
         createAndWriting(fileName, data);
         System.out.println(list.size());
         Collections.sort(list);
